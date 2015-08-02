@@ -5,8 +5,10 @@ This project uses Python Tornado web browser and RethinkDB to notify superheroes
 
 just install requirements
 
+~~~
 $ pip install requirements.txt
 $ python app.py
+~~~
 
 Visit http://localhost:8000 to see the website.
 
