@@ -59,9 +59,7 @@ class MainHandler(tornado.web.RequestHandler): #Class that renders login page
         threaded_conn = yield connection
         result = r.table(PROJECT_TABLE).insert({ "name": name , "email" : email}, conflict="error").run(threaded_conn)
         print 'log: %s inserted successfully'%result
-        self.write(home_template.render())
-
-
+        self.write(home_template.render({"name":name}))
 
 
 #Sends the new user joined alerts to all subscribers who subscribed
