@@ -32,7 +32,7 @@ def dbSetup():
         print 'Database setup completed.'
     except RqlRuntimeError:
         try:
-            r.db(PROJECT_DB).table_create(PROJECT_TABLE).run(connection)
+            r.db(PROJECT_DB).table_create(PROJECT_TABLE).run(db_connection)
             print 'Table creation completed'
         except:
             print 'Table already exists.Nothing to do'
